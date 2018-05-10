@@ -1,0 +1,57 @@
+<style>
+body{
+  background-color: rgb(212, 244, 221);
+}
+.button{
+  width: 16%;
+  height: 25px;
+  background-color: rgb(255, 140, 66);
+  border: solid black 5px;
+  border-radius: 50px;
+  margin-left: 12.2%;
+  /* margin-bottom: 50px; */
+  /* padding-top: 0px; */
+  text-align: center;
+  font-size: 25px;
+  display: inline-block;
+}
+.button:hover{
+  background-color: rgb(255,242,117)
+}
+</style>
+
+
+
+<body>
+  <div class="button" id="slow" onclick="setPlaySpeedSlow()" type="button"> Slow </div>
+  <div class="button" id="normal" onclick="setPlaySpeedNormal()" type="button"> Normal </div>
+  <div class="button" id="fast" onclick="setPlaySpeedFast()" type="button"> Fast </div>
+<video id="video" width="100%" height="100%" loop="true" autoplay="autoplay" >
+ <source src="images/finalfix.mp4" type="video/mp4">
+ </video>
+<body>
+
+
+
+  <script>
+
+// document.getElementById('video').play();
+
+var vid = document.getElementById("video");
+
+// function getPlaySpeed() {
+//     alert(vid.playbackRate);
+// }
+
+function setPlaySpeedSlow() {
+    vid.playbackRate = 0.5;
+}
+
+function setPlaySpeedNormal() {
+    vid.playbackRate = 1;
+}
+
+function setPlaySpeedFast() {
+    vid.playbackRate = 2;
+}
+</script>
